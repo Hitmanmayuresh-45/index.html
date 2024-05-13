@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <style>
+        body {
+            
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Us</h1>
+        </header>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DGB000002FvWd" method="POST">
+            <input type="hidden" name="oid" value="00DGB000002FvWd">
+            <input type="hidden" name="retURL" value="http://Salesforcegeek.in">
+            <label for="first_name">First Name</label><input id="first_name" maxlength="40" name="first_name" type="text" placeholder="Enter your first name" required><br>
+            <label for="last_name">Last Name</label><input id="last_name" maxlength="80" name="last_name" type="text" placeholder="Enter your last name" required><br>
+            <label for="email">Email</label><input id="email" maxlength="80" name="email" type="text" placeholder="Enter your email" required><br>
+            <label for="company">Company</label><input id="company" maxlength="40" name="company" type="text" placeholder="Enter your company name" required><br>
+            <label for="city">City</label><input id="city" maxlength="40" name="city" type="text" placeholder="Enter your city" required><br>
+            <label for="state">State/Province</label><input id="state" maxlength="20" name="state" type="text" placeholder="Enter your state/province" required><br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+
+    </div>
+</body>
+</html>
